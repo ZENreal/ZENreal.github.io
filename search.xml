@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Hexo NexT主題 主題優化]]></title>
+    <url>%2Fposts%2F44730%2F</url>
+    <content type="text"><![CDATA[一個測試文章 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[安裝Hexo Next主題網頁顯示空白]]></title>
     <url>%2Fposts%2F51517%2F</url>
     <content type="text"><![CDATA[前言終於還是從Butterfly轉成Next主題了，每次爬文發現大家都使用next主題做教程，有些檔案在我的主題裡名稱不一樣甚至格式也不一樣導致code寫法不同，找尋這些花了不少時間，最終決定也合流使用next主題了(畢竟懶…)。但是在我安裝next主題之後打開網頁卻是空白的，搞了半天發現是motion設置的問題，修改成false之後就可以正常開啟了。問題安裝/換成 next 主題"有可能"遇到以下問題：motion未設置成falseGitHub Pages 禁止了 source/vendors 目錄訪問theme設置處缺少空白或格式錯誤沒有hexo clean解決方式motion設置我猜測可能是頁面動畫導致網頁顯示空白，因此我將它設置成false就能正常顯示了。GitHub Pages 禁止了 source/vendors 目錄訪問我倒是沒遇到這個問題，有這個問題的可以參考：Hexo next 主题显示全白是什么原因？请问hexo next主题deploy到GitHub后不显示内容只显示框架这个问题怎么解决？網站配置文件中theme格式錯誤注意格式必須為以下：1theme: nexttheme:後方必需要有一個半形空格，且theme前方不能有別的東西。安裝主題後沒有hexo clean1hexo cleanhexo clean用來清除快取檔案 (db.json) 和已產生的靜態檔案 (public)。每次安裝完主題記得要clean。 document.querySelectorAll('.github-emoji') .forEach(el => { if (!el.dataset.src) { return; } const img = document.createElement('img'); img.style = 'display:none !important;'; img.src = el.dataset.src; img.addEventListener('error', () => { img.remove(); el.style.color = 'inherit'; el.style.backgroundImage = 'none'; el.style.background = 'none'; }); img.addEventListener('load', () => { img.remove(); }); document.body.appendChild(img); });]]></content>
