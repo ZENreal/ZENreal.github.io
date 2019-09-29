@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zenreal.github.io/"/>
-  <updated>2019-09-29T16:28:20.833Z</updated>
+  <updated>2019-09-29T16:30:01.774Z</updated>
   <id>https://zenreal.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://zenreal.github.io/posts/44730/"/>
     <id>https://zenreal.github.io/posts/44730/</id>
     <published>2019-09-29T15:23:57.000Z</published>
-    <updated>2019-09-29T16:28:20.833Z</updated>
+    <updated>2019-09-29T16:30:01.774Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一個測試文章</p><a id="more"></a><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>主題改為NexT之後發現能玩的功能實在太多了，要修改的地方也很多，本來以為使用最多人用的NexT主題可以少走很多彎路，但是才發現前不久NexT才做了重大更新，因此網上的一些教程也都失效了，為此決定寫這篇文章來記錄我個人的NexT主題優化歷程，順便分享給大家最新版本的修改方式。</p><a id="more"></a><h2 id="寫在前頭"><a class="header-anchor" href="#寫在前頭"></a>寫在前頭</h2><div class="alert alert-warning"><i class="fa fa-bell"></i> 2019/08/07 NexT主題更新到v7.2.0+<br>這一版之後的主題簡化自定義內容的添加方法，刪除了以前版本所用的custom.styl自定義css樣式文件</div><p>新版的使用方法，<span id="inline-yellow">主題配置文件</span>中：</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;一個測試文章&lt;/p&gt;
+      &lt;p&gt;主題改為NexT之後發現能玩的功能實在太多了，要修改的地方也很多，本來以為使用最多人用的NexT主題可以少走很多彎路，但是才發現前不久NexT才做了重大更新，因此網上的一些教程也都失效了，為此決定寫這篇文章來記錄我個人的NexT主題優化歷程，順便分享給大家最新版本的修改方式。&lt;/p&gt;
     
     </summary>
     
