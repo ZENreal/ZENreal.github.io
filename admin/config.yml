@@ -52,9 +52,9 @@ collections:
         editor:
           preview: true
         fields: *ref_0
-      - name: music-index.md
-        label: 音樂
-        file: source\music\index.md
+      - name: link-index.md
+        label: 友情鏈接
+        file: source\link\index.md
         editor:
           preview: true
         fields: *ref_0
@@ -64,9 +64,9 @@ collections:
         editor:
           preview: true
         fields: *ref_0
-      - name: link-index.md
-        label: 友情鏈接
-        file: source\link\index.md
+      - name: music-index.md
+        label: 音樂
+        file: source\music\index.md
         editor:
           preview: true
         fields: *ref_0
