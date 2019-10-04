@@ -52,6 +52,12 @@ collections:
         editor:
           preview: true
         fields: *ref_0
+      - name: tags-index.md
+        label: 標籤
+        file: source\tags\index.md
+        editor:
+          preview: true
+        fields: *ref_0
       - name: link-index.md
         label: 友情鏈接
         file: source\link\index.md
@@ -61,12 +67,6 @@ collections:
       - name: music-index.md
         label: 音樂
         file: source\music\index.md
-        editor:
-          preview: true
-        fields: *ref_0
-      - name: tags-index.md
-        label: 標籤
-        file: source\tags\index.md
         editor:
           preview: true
         fields: *ref_0
