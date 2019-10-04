@@ -46,6 +46,12 @@ collections:
     name: pages
     delete: false
     files:
+      - name: music-index.md
+        label: 音樂
+        file: source\music\index.md
+        editor:
+          preview: true
+        fields: *ref_0
       - name: categories-index.md
         label: 分類
         file: source\categories\index.md
@@ -61,12 +67,6 @@ collections:
       - name: tags-index.md
         label: 標籤
         file: source\tags\index.md
-        editor:
-          preview: true
-        fields: *ref_0
-      - name: music-index.md
-        label: 音樂
-        file: source\music\index.md
         editor:
           preview: true
         fields: *ref_0
