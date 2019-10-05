@@ -46,9 +46,9 @@ collections:
     name: pages
     delete: false
     files:
-      - name: link-index.md
-        label: 友情鏈接
-        file: source\link\index.md
+      - name: categories-index.md
+        label: 分類
+        file: source\categories\index.md
         editor:
           preview: true
         fields: *ref_0
@@ -58,9 +58,9 @@ collections:
         editor:
           preview: true
         fields: *ref_0
-      - name: categories-index.md
-        label: 分類
-        file: source\categories\index.md
+      - name: link-index.md
+        label: 友情鏈接
+        file: source\link\index.md
         editor:
           preview: true
         fields: *ref_0
