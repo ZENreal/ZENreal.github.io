@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zenreal.github.io/"/>
-  <updated>2019-10-10T12:46:13.927Z</updated>
+  <updated>2019-10-12T11:24:06.332Z</updated>
   <id>https://zenreal.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【學習筆記】資料結構－Linked list</title>
+    <link href="https://zenreal.github.io/posts/50960/"/>
+    <id>https://zenreal.github.io/posts/50960/</id>
+    <published>2019-10-12T10:56:57.000Z</published>
+    <updated>2019-10-12T11:24:06.332Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><div class="note warning"><p>由於是個人的學習筆記，因此有可能存在錯誤，若有發現錯誤之處煩請糾正或者一起討論！</p></div><a id="more"></a><h2 id="連結串列-linked-list"><a class="header-anchor" href="#連結串列-linked-list"></a>連結串列(Linked list)</h2><p>分為單向與雙向連結串列。</p><h3 id="單向連結串列"><a class="header-anchor" href="#單向連結串列"></a>單向連結串列</h3><p>概念圖如下圖所示</p><p><img alt data-src="https://raw.githubusercontent.com/ZENreal/picGo/master/img/LL1.png"></p><ol><li>由一組節點(Node)組成的有序串列。</li><li>每個節點有<code>資料欄(Data)</code>與一個<code>連結欄(Pointer)</code>組成。</li><li><code>連結欄(Pointer)</code>指向其它節點(Node)的位置。</li><li>以Null來代表Linked list的終點。</li><li>各節點之間並不一定占用連續的Memory空間</li><li>各節點的型態不一定相同</li><li>插入節點、刪除節點方便(因為只改變指標)</li><li>僅支援循序存取(Sequential Access)，不支援隨機存取(Random Access)</li><li>可任意(動態)增加、刪除空間</li></ol><p><img alt data-src="https://raw.githubusercontent.com/ZENreal/picGo/master/img/LL2.png"></p><h3 id="陣列-array-與連結串列-linked-list-比較"><a class="header-anchor" href="#陣列-array-與連結串列-linked-list-比較"></a>陣列(Array)與連結串列(Linked list)比較</h3><table><thead><tr><th style="text-align:center">陣列(Array)</th><th style="text-align:center">連結串列(Linked list)</th></tr></thead><tbody><tr><td style="text-align:center">占用連續的記憶體空間</td><td style="text-align:center">可以非連續</td></tr><tr><td style="text-align:center">各元素型態皆相同</td><td style="text-align:center">各節點型態不必一定相同</td></tr><tr><td style="text-align:center">新增/刪除資料很麻煩，費 O(n) (須挪移元素)</td><td style="text-align:center">新增/刪除資料較簡單，花費 O(1)(只更改指標)</td></tr><tr><td style="text-align:center">串列分裂、合併較難</td><td style="text-align:center">串列分裂、合併容易</td></tr><tr><td style="text-align:center">須事先宣告連續空間</td><td style="text-align:center">不需預留空間</td></tr><tr><td style="text-align:center">可支援隨機與循序存取</td><td style="text-align:center">只能循序存取(因為必須先讀取指標)</td></tr><tr><td style="text-align:center">可靠性佳</td><td style="text-align:center">可靠性差(因為指標斷裂，資料就遺失)</td></tr><tr><td style="text-align:center">沒有額外的Link空間需求</td><td style="text-align:center">需要額外的Link空間需求</td></tr></tbody></table><p><strong>陣列(Array)優點</strong></p><ul><li>random access：只要利用index即可在O(1)時間對Array的資料做存取。</li><li>較Linked list為節省記憶體空間：因為Linked list需要多一個pointer來記錄下一個node的記憶體位置。</li></ul><p><strong>連結串列(Linked list)優點</strong></p><ul><li>新增/刪除資料較Array簡單，只要對O(1)個node(所有與欲新增/刪除的node有pointer相連的node)調整pointer即可，不需要如同Array般搬動其餘元素。</li><li>若是在Linked list的「開頭」新增node，只要O(1)。</li><li>若要刪除特定node，或者在特定位置新增node，有可能需要先執行O(N)的「搜尋」。</li></ul><h3 id="動態記憶體配置"><a class="header-anchor" href="#動態記憶體配置"></a>動態記憶體配置</h3><p>動態記憶體配置(Dynamical Memory Allocation)主要是利用<code>連結串列</code>的方法來解決一些無法事先預測處理資料多寡的問題。</p><p><strong>【定義】</strong></p><p><br><strong>動態記憶體配置</strong>是在等到<code>執行階段</code>，才向作業系統要求配置所需的記憶體空間。而<strong>靜態記憶體配置</strong>則是<code>編譯階段</code>時就配置記憶體空間。</p><p><img alt data-src="https://raw.githubusercontent.com/ZENreal/picGo/master/img/LL4.png"></p><h3 id="靜態與動態資料結構"><a class="header-anchor" href="#靜態與動態資料結構"></a>靜態與動態資料結構</h3><p>在靜態資料結構中，由於資料所佔用的空間大小及資料數目要事先宣告，因此，在執行時，空間的大小及資料數目是不會改變的(因為利用陣列結構)。<br>而在動態資料結構中，資料所佔用之空間大小及資料數目不必事先宣告，在執行時視實際需要而動態的增加或減少(因為利用串列結構)。</p><p><img alt data-src="https://raw.githubusercontent.com/ZENreal/picGo/master/img/LL3.PNG"></p><h3 id="linked-list-時間複雜度"><a class="header-anchor" href="#linked-list-時間複雜度"></a>Linked list 時間複雜度</h3><p><img alt data-src="https://raw.githubusercontent.com/ZENreal/picGo/master/img/LL5.jpeg"></p><h2 id="參考資料"><a class="header-anchor" href="#參考資料"></a>參考資料</h2><ul><li><a href="http://marklin-blog.logdown.com/posts/1414090-the-underlying-data-structures-2-serial-links-linked-list" rel="external nofollow noopener noreferrer" target="_blank">基礎資料結構(2)—連結串列（Linked list)</a></li><li><a href="http://alrightchiu.github.io/SecondRound/linked-list-introjian-jie.html" rel="external nofollow noopener noreferrer" target="_blank">Linked List: Intro(簡介)</a></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note warning&quot;&gt;&lt;p&gt;由於是個人的學習筆記，因此有可能存在錯誤，若有發現錯誤之處煩請糾正或者一起討論！&lt;/p&gt;&lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="資料結構" scheme="https://zenreal.github.io/categories/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+    
+      <category term="學習筆記" scheme="https://zenreal.github.io/tags/%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98/"/>
+    
+      <category term="資料結構" scheme="https://zenreal.github.io/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/"/>
+    
+      <category term="連結串列" scheme="https://zenreal.github.io/tags/%E9%80%A3%E7%B5%90%E4%B8%B2%E5%88%97/"/>
+    
+  </entry>
   
   <entry>
     <title>【學習筆記】資料結構－陣列</title>
@@ -474,25 +501,6 @@
       <category term="Hexo" scheme="https://zenreal.github.io/tags/Hexo/"/>
     
       <category term="markdown" scheme="https://zenreal.github.io/tags/markdown/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HELLO</title>
-    <link href="https://zenreal.github.io/posts/57665/"/>
-    <id>https://zenreal.github.io/posts/57665/</id>
-    <published>2019-09-22T13:33:57.000Z</published>
-    <updated>2019-10-07T12:52:34.323Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一個測試文章</p><a id="more"></a><p>Emoji表情測試</p><p>❤️<br>💙<br>💜<br>🖤<br>💔<br>❣️<br>💕<br>💞<br>💓</p><p>test hexo-admin</p><div class="note warning"><p>test</p></div><figure class="highlight diff"><figcaption><span>代碼測試</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">code here</span><br><span class="line"><span class="addition">+ lowe</span></span><br><span class="line"><span class="deletion">- fkdosp</span></span><br></pre></td></tr></tbody></table></figure><p><span id="inline-toc">1.</span></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id="inline-toc"&gt;1.&lt;/span&gt;</span><br></pre></td></tr></tbody></table></figure><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一個測試文章&lt;/p&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
